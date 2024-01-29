@@ -30,7 +30,7 @@
 
                 <!-- Start::slide -->
                 <li class="slide has-sub">
-                    <a href="{{ route('attendance.indexs') }}" class="side-menu__item">
+                    <a href="{{ route('attendance') }}" class="side-menu__item">
                         <i class="bx bx-file-blank side-menu__icon"></i>
                         <span class="side-menu__label">Attendance<span class="badge bg-secondary-transparent ms-2"></span></span>    
                     </a>  
@@ -38,7 +38,7 @@
                
         <!-- Start::slide -->
         <li class="slide has-sub">
-            <a href="{{ route('employees.index') }}" class="side-menu__item">
+            <a href="{{ route('employees') }}" class="side-menu__item">
                 <i class="bx bx-fingerprint side-menu__icon"></i>
                 <span class="side-menu__label">Employees</span>
                 <i class="fe fe-chevron-right side-menu__angle"></i>
@@ -52,7 +52,7 @@
 
                 <!-- Start::slide -->
                 <li class="slide has-sub">
-                    <a href="{{ route('schedule.index') }}" class="side-menu__item">
+                    <a href="{{ route('schedule') }}" class="side-menu__item">
                         <i class="bx bx-medal side-menu__icon"></i>
                         <span class="side-menu__label">Schedule</span>   
                     </a>

@@ -1,10 +1,7 @@
-<?php
-
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-
-
 use App\Models\Attendance;
 use Carbon\Carbon;
 
@@ -26,6 +23,8 @@ class AttendanceController extends Controller
             array_push($months, $monthName);
         }
 
-        return view('attendance.indexs', ['count' => $count, 'months' => $months]);
+        $attendances = DB::table('attendances')->get();
+
+        return view('attendance.index', ['attendances' => $attendances, 'count' => $count, 'months' => $months]);
     }
 }

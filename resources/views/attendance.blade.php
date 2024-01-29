@@ -1,8 +1,18 @@
-<div class="inner">
-    <?php
-        $sql = "SELECT * FROM attendance WHERE date = '$today' AND status = 1";
-        $query = $conn->query($sql);
+@extends('layouts.app')
 
-        echo "<h3>".$query->num_rows."</h3>";
-    ?>
-</div>
+@section('content')
+
+    <div class="inner">
+        <?php
+            $today = date('Y-m-d'); // Define the $today variable with the current date
+
+            $query = DB::table('attendance')
+                ->where('date', $today)
+                ->where('status', 1)
+                ->get();
+
+            echo "<h3>".count($query)."</h3>";
+        ?>
+    </div>
+    //
+@endsection

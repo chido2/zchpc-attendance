@@ -40,14 +40,13 @@ Route::get('/password/reset', [ForgotPasswordController::class, 'showLinkRequest
 
 use App\Http\Controllers\AttendanceController;
 
-Route::get('/attendance', [AttendanceController::class, 'indexs'])->name('attendance.indexs');
-
+Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance');
 
 
 use App\Http\Controllers\EmployeeController;
 
-Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
+Route::get('/employees', [EmployeeController::class, 'index'])->name('employees');
 
 use App\Http\Controllers\ScheduleController;
-Route::get('/schedule', [ScheduleController::class, 'index'])->name('schedule.index');
+Route::get('/schedule', [ScheduleController::class, 'index'])->name('schedule');
 
